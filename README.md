@@ -1,17 +1,34 @@
-# Getting Started
+# Project 02
 
-### Reference Documentation
+Spring - Rsocket
 
-For further reference, please consider the following sections:
+[https://gitorko.github.io/spring-rsocket/](https://gitorko.github.io/spring-rsocket/)
 
-* [Official Gradle documentation](https://docs.gradle.org)
-* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/3.3.0/gradle-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.3.0/gradle-plugin/reference/html/#build-image)
-* [RSocket](https://rsocket.io/)
+### Version
 
-### Additional Links
+Check version
 
-These additional references should also help you:
+```bash
+$java --version
+openjdk 21.0.3 2024-04-16 LTS
+```
 
-* [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
+### Dev
 
+To run the code.
+
+```bash
+./gradlew clean build
+
+java -jar rserver/build/libs/rserver-1.0.0.jar
+java -jar rclient/build/libs/rclient-1.0.0.jar
+
+./gradlew :rserver:build
+./gradlew :rclient:build
+./gradlew :rcommon:build
+
+./gradlew :rserver:bootRun
+./gradlew :rclient:bootRun
+
+./gradlew bootJar
+```
